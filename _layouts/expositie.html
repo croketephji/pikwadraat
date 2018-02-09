@@ -1,0 +1,39 @@
+---
+layout: post
+---
+{%- include expoactive.html expositie=page.title onexpopage=true -%}
+
+{{content}}
+
+{% assign sorted-kunstenaars = site.kunstenaars | sort:'title' %}
+{%- for gallery-kunstenaar in sorted-kunstenaars -%}
+  {%- include kunstenaarinexpo.html expositie=page.title kunstenaar=gallery-kunstenaar.title%}
+  {%- if inexpo == true -%}
+    <a href={{gallery-kunstenaar.url}}><h3>{{gallery-kunstenaar.title}}</h3></a>
+
+    <ul class=gallery>
+
+    {% assign sorted-werken = site.werken | where:'expositie', page.title | sort:'title' %}
+    {%- for gallery-werk in sorted-werken -%}
+      {%- if gallery-werk.kunstenaar == gallery-kunstenaar.title -%}
+        <ul class=gallery-item>
+        <a href={{gallery-werk.url}}>{{gallery-werk.title}}</a>
+        <li>
+        {%- include showmedia.html referent=gallery-werk -%}
+        </li>
+        {%- if gallery-werk.content != blank -%}
+          <li>
+          {{gallery-werk.content}}
+          </li>
+        {%- endif -%}
+        {%- if gallery-werk.tekoop == "ja" and gallery-werk.prijs > 0 -%}
+          <li>
+          {{gallery-werk.prijs}} EUR <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{gallery-werk.title}}&quot; kopen" target="_top">Koop dit werk</a>
+          </li>
+        {%- endif -%}
+        </ul>
+      {%- endif -%}
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,6 @@
+{%- assign inexpo = false -%}
+{%- for werk in site.werken -%}
+  {%- if werk.kunstenaar == include.kunstenaar and werk.expositie == include.expositie -%}
+    {%- assign inexpo = true -%}
+  {%- endif -%}
+{%- endfor -%}

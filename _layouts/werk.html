@@ -1,0 +1,29 @@
+---
+layout: post
+---
+
+{{content}}
+
+<ul class="gallery">
+
+      <ul class="gallery-item">
+        <li>
+        {% include showmedia.html referent=page aslink='no' %}
+        </li>
+      </ul>
+
+</ul>
+
+door
+{% for kunstenaar in site.kunstenaars %}
+ {% if kunstenaar.title == page.kunstenaar %}
+
+  <a href="{{ kunstenaar.url }}">{{ kunstenaar.title }}</a>
+ {% endif %}
+{% endfor %}
+
+{% include expoactive.html expositie=page.expositie onexpopage=false %}
+
+{% if page.tekoop == "ja" and page.prijs > 0 %}
+{{page.prijs}} EUR <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{page.title}}&quot; kopen" target="_top">Koop dit werk</a>
+{% endif %}
