@@ -1,0 +1,6 @@
+    {%- assign haswork = false -%}
+{%- for werk in site.werken -%}
+  {%- if werk.kunstenaar == include.kunstenaar -%}
+    {%- assign haswork = true -%}
+  {%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,72 @@
+<div class="subtitle">
+
+{%- for checked-expositie in site.exposities -%}
+  {%- if checked-expositie.title == include.expositie -%}
+    {% assign expositie = checked-expositie %}
+  {%- endif -%}
+{%- endfor -%}
+
+{% assign nowTimestamp = 'now' | date: '%s' %}
+
+{% assign beginsec = expositie.begin | date: '%s' %}
+{% assign secondentotbegin = beginsec | minus: nowTimestamp %}
+{% assign dagentotbegin = secondentotbegin | divided_by: 3600 | divided_by: 24 %}
+
+{% assign eindsec = expositie.einde | date: '%s' %}
+{% assign secondentoteinde = eindsec | minus: nowTimestamp %}
+{% assign dagentoteinde = secondentoteinde | divided_by: 3600 | divided_by: 24 %}
+
+{%- if dagentotbegin > 10 -%}
+  {%- if include.onexpopage == false -%}
+    Binnenkort <a href="{{ expo.url }}"> in expo</a>! De expositie begint op {{ expositie.begin | date: '%s' }}.
+  {%- else -%}
+    Deze expositie begint op {{ expositie.begin | date: '%s' }}.
+  {%- endif -%}
+
+{%- elsif dagentotbegin <= 10 and dagentotbegin > 1 -%}
+  {%- if include.onexpopage == false -%}
+    Hoog tijd om te plannen!<a href="{{ expo.url }}"> In expo</a> over {{ dagentotbegin }} dagen.
+  {%- else -%}
+    Hoog tijd om te plannen! Deze expositie begint over {{ dagentotbegin }} dagen.
+  {%- endif -%}
+
+{%- elsif dagentotbegin <= 1 and secondentotbegin > 0 -%}
+  {%- if include.onexpopage == false -%}
+    Hoog tijd om te plannen!<a href="{{ expo.url }}"> Vanaf morgen in expo</a>.
+  {%- else -%}
+    Hoog tijd om te plannen! Deze expositie begint morgen.
+  {%- endif -%}
+
+{%- elsif secondentotbegin <= 0 and dagentoteinde > 10 -%}
+  {%- if include.onexpopage == false -%}
+    Nu <a href="{{ expo.url }}"> in expo</a>! De expositie loopt nog {{ dagentoteinde }} dagen.
+  {%- else -%}
+    Wees erbij! Deze expositie loopt nog {{ dagentoteinde }} dagen.
+  {%- endif -%}
+
+{%- elsif dagentoteinde <= 10 and dagentoteinde > 1 -%}
+  {%- if include.onexpopage == false -%}
+    Nog maar {{ dagentoteinde }}<a href="{{ expo.url }}"> dagen in expo</a>!
+  {%- else -%}
+    De expositie loopt nog maar {{ dagentoteinde }} dagen!
+  {%- endif -%}
+
+{%- elsif dagentoteinde <= 1 and secondentoteinde > 0 -%}
+  {%- if include.onexpopage == false -%}
+    Tot vandaag <a href="{{ expo.url }}"> in expo</a>!
+  {%- else -%}
+    De expositie eindigt vandaag!
+  {%- endif -%}
+
+{%- elsif secondentoteinde <= 0 -%}
+  {%- if include.onexpopage == false -%}
+  {%- else -%}
+    Deze expo is voorbij.
+  {%- endif -%}
+
+{%- else -%}
+  Fout: Er is iets mis met de data van de expositie.
+
+{%- endif -%}
+
+</div>

@@ -1,0 +1,37 @@
+---
+layout: default
+title: Kunstenaars
+permalink: /kunstenaars/index.html
+gallerylimit: 2
+---
+
+{%- assign sorted-kunstenaars = site.kunstenaars | sort:'title' -%}
+{%- for gallery-kunstenaar in sorted-kunstenaars -%}
+  {%- include kunstenaarhaswork.html kunstenaar=gallery-kunstenaar.title -%}
+  {%- if haswork == true -%}
+    <a href={{gallery-kunstenaar.url}}><h3>{{gallery-kunstenaar.title}}</h3></a>
+    <ul class=gallery>
+    {%- assign werk-samples = site.werken | sort:'title' | where:'kunstenaar',gallery-kunstenaar.title | sample:page.gallerylimit -%}
+    {%- for werk-sample in werk-samples -%}
+        <ul class=gallery-item>
+
+        <a href={{werk-sample.url}}>{{werk-sample.title}}</a>
+
+        <li>
+        {%- include showmedia.html referent=werk-sample -%}
+        </li>
+        {%- if werk-sample.content != blank -%}
+          <li>
+          {{werk-sample.content}}
+          </li>
+        {%- endif -%}
+        {%- if werk-sample.tekoop == "ja" and werk-sample.prijs > 0 -%}
+          <li>
+          {{werk-sample.prijs}} EUR <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{werk-sample.title}}&quot; kopen" target="_top">Koop dit werk</a>
+          </li>
+        {%- endif -%}
+        </ul>
+    {%- endfor -%}
+    </ul>
+  {%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Taviraj|Playfair+Display+SC:normal,black|Lora">
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+			<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		</head>
+		<body>
+			<navbar>
+	    		<ul>
+					<li><a href="/"><img src="/assets/site/logo.svg" alt="Home Icon" style="width:32px;height:32px;"></a></li>
+	        		<li><a href="/">pi kwadraat</a></li>
+					{% for expo in site.exposities %}
+						{%- if expo.begin < site.time and expo.einde > site.time -%}
+						<li><a href={{expo.url}}>bezoek nu {{expo.title}}</a></li>
+						{%- endif -%}
+					{% endfor %}
+					<li><a href="/exposities">exposities</a></li>
+					<li><a href="/kunstenaars">kunstenaars</a></li>
+					<li><a href="/contact">contact</a></li>
+	    		</ul>
+			</navbar>
+			<div class="container">
+			<h1>galerij pi kwadraat</h1>
+			<h2>{{ page.title }}</h2>
+			{{ content }}
+
+			</div><!-- /.container -->
+		</body>
+	</html>
