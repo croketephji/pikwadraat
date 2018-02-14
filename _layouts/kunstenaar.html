@@ -1,8 +1,10 @@
 ---
-layout: post
+layout: default
 ---
-
+<div class="superparagraph">
+<h2>{{ page.title }}</h2>
 {{content}}
+</div>
 
 <ul class="gallery">
 {% assign sorted-werken = site.werken | sort:'title' %}
@@ -11,12 +13,13 @@ layout: post
   <li>
       <ul class="gallery-item">
 
+        <div class="media">
+          <li>
+          {% include showmedia.html referent=werk %}
+          </li>
+        </div>
+        <div class="info">
         <a href="{{ werk.url }}">{{ werk.title }}</a>
-
-        <li>
-        {% include showmedia.html referent=werk %}
-        </li>
-
         <li>
         {{ werk.content }}
         </li>
@@ -30,7 +33,7 @@ layout: post
         {{werk.prijs}} EUR <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{werk.title}}&quot; kopen" target="_top">Koop dit werk</a>
         {% endif %}
         </li>
-
+        </div>
       </ul>
   </li>
   {% endif %}

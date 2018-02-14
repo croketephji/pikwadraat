@@ -4,6 +4,9 @@ title: Kunstenaars
 permalink: /kunstenaars/index.html
 gallerylimit: 2
 ---
+<div class="superparagraph">
+<h2>{{ page.title }}</h2>
+</div>
 
 {%- assign sorted-kunstenaars = site.kunstenaars | sort:'title' -%}
 {%- for gallery-kunstenaar in sorted-kunstenaars -%}

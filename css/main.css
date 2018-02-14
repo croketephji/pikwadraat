@@ -17,31 +17,52 @@ ul {
     padding: 0;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-/*    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); */
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    background-color: white;
-}
-
-.gallery-item {
+/*.container {
   display: grid;
-  justify-content: left;
-  border-style: solid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "navbar navbar navbar navbar navbar navbar"
+    "header header header superparagraph superparagraph superparagraph";
+}*/
+
+.container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
 }
 
-navbar ul, footer ul {
+.superparagraph {
+  grid-area: superparagraph;
+  grid-column: 4 / span 3;
+  grid-row: 2 / span 1;
+}
+
+.gallery {
+  grid-area: gallery-item;
+  grid-column: 1 / span 6;
+  justify-content: left;
+}
+
+.navbar {
+  grid-area: navbar;
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: nowrap; /* assumes you only want one row */
+  flex-wrap: nowrap;
 }
 
 navbar ul li, footer ul li {
     display: inline-block;
+}
+
+.header {
+  grid-area: header;
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 1;
 }
 
 h1 {
@@ -49,7 +70,6 @@ h1 {
   color: var(--main-text-color);
 	line-height: 0.85em;
   word-spacing: 7px;
-  margin-top: 70px;
   text-decoration: underline;
 	text-decoration-color: var(--contrast-color);
 	font-weight: bold;
@@ -100,26 +120,14 @@ p a:hover {
 
 img {
     image-orientation: from-image;
-    width: 100%;
-    max-height: 100px;
+    grid-area: media;
+    width: auto;
+    max-width: 50%;
     height: auto;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 10px 1fr;
-  grid-template-rows: 1fr;
-}
-
-.item {
-
 }
 
 /* zombie css: content // img.inline // blockquote // footer // ul.posts
 
-## content class: may be brought back
-.content {
-}
 
 ## .img.inline.left & .img.inline.full: can be used for inspiration - for now all images will be assumed to be in a gallery
 .img-inline-left {
