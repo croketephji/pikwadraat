@@ -9,8 +9,9 @@
 			<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		</head>
 		<body>
-			<navbar>
-	    		<ul>
+		<div class="container">
+
+	    		<ul class="navbar">
 					<li><a href="/"><img src="/assets/site/logo.svg" alt="Home Icon" style="width:32px;height:32px;"></a></li>
 	        		<li><a href="/">pi kwadraat</a></li>
 					{% for expo in site.exposities %}
@@ -22,12 +23,19 @@
 					<li><a href="/kunstenaars">kunstenaars</a></li>
 					<li><a href="/contact">contact</a></li>
 	    		</ul>
+<<<<<<< HEAD
 			</navbar>
 			<div class="titlestuff">
 			<h1>galerij pi kwadraat</h1>
 			<h2>{{ page.title }}</h2>
 			{{ content }}
+=======
+>>>>>>> all-grid
 
-			</div><!-- /.container -->
+			<div class="header">
+			  <h1>galerij pi kwadraat</h1>
+			</div>
+				{{content}}
+		</div>
 		</body>
 	</html>

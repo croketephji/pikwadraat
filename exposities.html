@@ -4,11 +4,16 @@ title: Exposities
 permalink: /exposities/index.html
 gallerylimit: 4
 ---
+<div class="superparagraph">
+<h2>{{ page.title }}</h2>
+</div>
+
 {% assign sorted-exposities = site.exposities | sort:'begin' | reverse %}
 {%- for gallery-expositie in sorted-exposities -%}
+  <ul class=gallery>
     <h3><a href={{gallery-expositie.url}}>{{gallery-expositie.title}}</a></h3>
     {{gallery-expositie.content}}
-    <ul class=gallery>
+
     {% assign werk-samples = site.werken | where:"expositie", gallery-expositie.title | sort:'title' | sample:page.gallerylimit %}
     {%- for werk-sample in werk-samples -%}
       {%- if werk-sample.expositie == gallery-expositie.title -%}

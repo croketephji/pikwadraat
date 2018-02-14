@@ -1,6 +1,5 @@
 ---
 title: Grid test
-layout: default
 ---
 
 Bla
