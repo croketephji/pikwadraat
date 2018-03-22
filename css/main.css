@@ -3,6 +3,7 @@
   --contrast-color: #fe9a9a;
   --grey-color: #808080;
   --main-text-color: #2d2829;
+  --grid-gap: 20px;
 }
 
 body {
@@ -36,6 +37,7 @@ ul {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-auto-flow: row dense;
+  grid-gap: var(--grid-gap);
 }
 
 .gallery-image {
@@ -71,6 +73,7 @@ navbar ul li, footer ul li {
   grid-area: header;
   grid-column: 1 / span 3;
   grid-row: 2 / span 1;
+  padding-bottom: 20px;
 }
 
 h1 {
