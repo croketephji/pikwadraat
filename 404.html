@@ -1,24 +1,19 @@
 ---
 layout: default
+title: Pagina niet gevonden
+gallerylimit: 6
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="superparagraph">
+    <img src="/assets/site/404.svg" alt="404 Pagina niet gevonden" class="cover" style="width:200px;height:200px;">
+</div>
+<div class="gallery">
+  <div class="superparagraph">
+  	 <p>De gevraagde pagina werd niet gevonden. Sloop er een fout in het webadres?</p>
+  </div>
+  {% assign werk-samples = site.werken | sample:page.gallerylimit %}
+  {% for werk in werk-samples %}
+      <div class="gallery-thumbnail">
+        {% include showmedia.html referent=werk %}
+      </div>
+  {% endfor %}
 </div>
