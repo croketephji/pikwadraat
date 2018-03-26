@@ -14,6 +14,7 @@
 				<a href="/"><img src="/assets/site/logo.svg" alt="Home Icon"></a>
 			</div>
 	    <ul class="navbar">
+				<li><a href="/">pi kwadraat</a></li>
 				{% for expo in site.exposities %}
 					{%- if expo.begin < site.time and expo.einde > site.time -%}
 						<li><a href={{expo.url}}>bezoek nu {{expo.title}}</a></li>

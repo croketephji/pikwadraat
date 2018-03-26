@@ -14,7 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Pi Kwadraat
-email: your-email@example.com
+google_maps_javascript_api_key: "AIzaSyCslLExU7aE6ciRbS_zrWI5Y08TNuveU3I"
+email: ypermanpaul@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Galerij Pi Kwadraat in Erpe brengt hedendaagse keramiek en glas van jonge, beloftevolle kunstenaars en bekende artiesten.
 baseurl: "" # the subpath of your site, e.g. /blog

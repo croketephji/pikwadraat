@@ -1,0 +1,10 @@
+<form accept-charset="UTF-8" action="https://formspree.io/{{site.email}}" method="post">
+  <input type="email" name="email" value="" autocomplete="on" placeholder="Uw emailadres" required>
+  <textarea name="message" value="" autocomplete="off" placeholder="Uw boodschap"></textarea>
+  <input type="submit" name="submit" value="Verzenden">
+  
+  <input type="hidden" name="_subject" value="Betreft {{include.referent}}">
+  <input type="text" name="_gotcha" style="display:none">
+  <input type="hidden" name="_next" value="{{include.referent.url}}">
+  <input type="hidden" name="_language" value="nl" />
+</form>

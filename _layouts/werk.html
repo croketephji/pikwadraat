@@ -20,7 +20,8 @@ layout: default
     {%- if page.prijs > 0 -%}
       {{page.prijs}} EUR
     {%- endif -%}
-     <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{page.title}}&quot; kopen" target="_top">Navraag naar dit werk</a>
+    Neem contact met ons op om dit werk te kopen.
+    {%- include contactform.html referent=page.title-%}
     </p>
     {% endif %}
   </div>
