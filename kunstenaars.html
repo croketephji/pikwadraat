@@ -2,7 +2,7 @@
 layout: default
 title: Kunstenaars
 permalink: /kunstenaars/index.html
-gallerylimit: 2
+gallerylimit: 6
 ---
 <div class="superparagraph">
 <h2>{{ page.title }}</h2>
@@ -12,17 +12,18 @@ gallerylimit: 2
 {%- for gallery-kunstenaar in sorted-kunstenaars -%}
   {%- include kunstenaarhaswork.html kunstenaar=gallery-kunstenaar.title -%}
   {%- if haswork == true -%}
-    <a href={{gallery-kunstenaar.url}}><h3>{{gallery-kunstenaar.title}}</h3></a>
-    <ul class=gallery>
+  <div class="gallery">
+    <div class="superparagraph">
+      <h3><a href={{gallery-kunstenaar.url}}>{{gallery-kunstenaar.title}}</a></h3>
+    </div>
     {%- assign werk-samples = site.werken | sort:'title' | where:'kunstenaar',gallery-kunstenaar.title | sample:page.gallerylimit -%}
     {%- for werk-sample in werk-samples -%}
-        <ul class=gallery-item>
-
-        <a href={{werk-sample.url}}>{{werk-sample.title}}</a>
-
-        <li>
+      <div class="gallery-thumbnail">
         {%- include showmedia.html referent=werk-sample -%}
-        </li>
+      </div>
+        {%- comment %}
+        	Keep it simple, stupid
+
         {%- if werk-sample.content != blank -%}
           <li>
           {{werk-sample.content}}
@@ -33,8 +34,8 @@ gallerylimit: 2
           {{werk-sample.prijs}} EUR <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{werk-sample.title}}&quot; kopen" target="_top">Koop dit werk</a>
           </li>
         {%- endif -%}
-        </ul>
+        {% endcomment -%}
     {%- endfor -%}
-    </ul>
+  </div>
   {%- endif -%}
 {%- endfor -%}

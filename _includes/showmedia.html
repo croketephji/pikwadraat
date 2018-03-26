@@ -2,12 +2,8 @@
 {%- assign aslink = include.aslink | default: 'yes' -%}
 {%- for mymedia in media_files -%}
   {%- if mymedia.path contains include.referent.title and aslink=='yes' -%}
-    <div class="gallery-image">
       <a href="{{include.referent.url}}"><img src="{{mymedia.path}}" alt="{{include.referent.title}}" class="cover"></a>
-    </div>
   {%- elsif mymedia.path contains include.referent.title and aslink=='no' -%}
-    <div class="gallery-image">
       <img src="{{mymedia.path}}" alt="{{include.referent.title}}" class="cover">
-    </div>
   {%- endif -%}
 {%- endfor -%}

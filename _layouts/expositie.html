@@ -4,10 +4,9 @@ layout: default
 
 <div class="superparagraph">
 <h2>{{ page.title }}</h2>
+{%- include expoactive.html expositie=page.title onexpopage=true -%}
 {{content}}
 </div>
-
-{%- include expoactive.html expositie=page.title onexpopage=true -%}
 
 {% assign sorted-kunstenaars = site.kunstenaars | sort:'title' %}
 {%- for gallery-kunstenaar in sorted-kunstenaars -%}
@@ -15,16 +14,19 @@ layout: default
   {%- if inexpo == true -%}
 
     <div class=gallery>
-        <a href={{gallery-kunstenaar.url}} class="gallery-title"><h3>{{gallery-kunstenaar.title}}</h3></a>
-
+      <div class="superparagraph">
+        <h3><a href={{gallery-kunstenaar.url}} class="gallery-title">{{gallery-kunstenaar.title}}</a></h3>
+      </div>
 
     {% assign sorted-werken = site.werken | where:'expositie', page.title | sort:'title' %}
     {%- for gallery-werk in sorted-werken -%}
       {%- if gallery-werk.kunstenaar == gallery-kunstenaar.title -%}
-        <div class=gallery-item>
-        <div class="media">
+        <div class="gallery-thumbnail">
           {%- include showmedia.html referent=gallery-werk -%}
         </div>
+        {%- comment %}
+        	This is a foo
+
         <div class="info">
           <a href={{gallery-werk.url}}>{{gallery-werk.title}}</a>
           {%- if gallery-werk.content != blank -%}
@@ -33,9 +35,9 @@ layout: default
           {%- if gallery-werk.tekoop == "ja" and gallery-werk.prijs > 0 -%}
             {{gallery-werk.prijs}} EUR <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{gallery-werk.title}}&quot; kopen" target="_top">Koop dit werk</a>
           {%- endif -%}
+          
         </div>
-
-      </div>
+        {% endcomment -%}
       {%- endif -%}
     {%- endfor -%}
   </div>

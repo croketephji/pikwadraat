@@ -6,37 +6,14 @@ layout: default
 {{content}}
 </div>
 
-<ul class="gallery">
+<div class="gallery">
 {% assign sorted-werken = site.werken | sort:'title' %}
-{% for werk in site.werken %}
+{% for werk in sorted-werken %}
   {% if werk.kunstenaar == page.title %}
-  <li>
-      <ul class="gallery-item">
-
-        <div class="media">
-          <li>
-          {% include showmedia.html referent=werk %}
-          </li>
-        </div>
-        <div class="info">
-        <a href="{{ werk.url }}">{{ werk.title }}</a>
-        <li>
-        {{ werk.content }}
-        </li>
-
-        <li>
-        {% include expoactive.html expositie=werk.expositie onexpopage=false %}
-        </li>
-
-        <li>
-        {% if werk.tekoop == "ja" and werk.prijs > 0 %}
-        {{werk.prijs}} EUR <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{werk.title}}&quot; kopen" target="_top">Koop dit werk</a>
-        {% endif %}
-        </li>
-        </div>
-      </ul>
-  </li>
+    <div class="gallery-midsize">
+      {% include showmedia.html referent=werk %}
+    </div>
   {% endif %}
 {% endfor %}
 
-</ul>
+</div>

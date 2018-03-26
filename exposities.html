@@ -2,7 +2,7 @@
 layout: default
 title: Exposities
 permalink: /exposities/index.html
-gallerylimit: 4
+gallerylimit: 6
 ---
 <div class="superparagraph">
 <h2>{{ page.title }}</h2>
@@ -18,7 +18,9 @@ gallerylimit: 4
     {% assign werk-samples = site.werken | where:"expositie", gallery-expositie.title | sort:'title' | sample:page.gallerylimit %}
     {%- for werk-sample in werk-samples -%}
       {%- if werk-sample.expositie == gallery-expositie.title -%}
-        {%- include showmedia.html referent=werk-sample -%}
+        <div class="gallery-thumbnail">
+          {%- include showmedia.html referent=werk-sample -%}
+        </div>
       {%- endif -%}
     {%- endfor -%}
   </div>
