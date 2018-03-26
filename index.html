@@ -2,13 +2,17 @@
 layout: default
 title: Galerij Pi Kwadraat
 ---
-
-<div class="superparagraph">
-  <h2>{{ page.title }}</h2>
-	 <p>Galerij pi kwadraat heeft de deuren geopend op het eind van de vorige eeuw, september 1999 om precies te zijn. In een eigentijds gebouw worden een aantal tentoonstellingen per jaar georganiseerd. Daarnaast is de galerij open na afspraak.
-   De klemtoon ligt op hedendaagse keramiek en glas, maar regelmatig komen ook andere disciplines aan bod. Vaak gaat het om werk van jonge, beloftevolle kunstenaars in combinatie met kunstenaars die al enige bekendheid verworven hebben.</p>
-</div>
-
 <div class="gallery">
-  {% include showmedia.html referent=page aslink='no' %}
+  <div class="superparagraph">
+  	 <p>Galerij pi kwadraat heeft de deuren geopend op het eind van de vorige eeuw, september 1999 om precies te zijn. In een eigentijds gebouw worden een aantal tentoonstellingen per jaar georganiseerd. Daarnaast is de galerij open na afspraak.
+     De klemtoon ligt op hedendaagse keramiek en glas, maar regelmatig komen ook andere disciplines aan bod. Vaak gaat het om werk van jonge, beloftevolle kunstenaars in combinatie met kunstenaars die al enige bekendheid verworven hebben.</p>
+  </div>
+  {%- assign media_files = site.static_files | where: "media", true -%}
+  {%- for mymedia in media_files -%}
+    {%- if mymedia.path contains page.title -%}
+      <div class="gallery-full">
+        <img src="{{mymedia.path}}" alt="{{page.title}}" class="cover">
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
 </div>

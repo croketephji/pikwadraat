@@ -2,29 +2,29 @@
 layout: default
 ---
 <div class="superparagraph">
-<h2>{{ page.title }}</h2>
-{{content}}
+  {% for kunstenaar in site.kunstenaars %}
+   {% if kunstenaar.title == page.kunstenaar %}
+    <h2>
+      <a href="{{ kunstenaar.url }}">{{kunstenaar.title}}</a>
+    </h2>
+    {% include expoactive.html expositie=page.expositie onexpopage=false %}
+   {% endif %}
+  {% endfor %}
 </div>
-<ul class="gallery">
-
-      <ul class="gallery-item">
-        <li>
-        {% include showmedia.html referent=page aslink='no' %}
-        </li>
-      </ul>
-
-</ul>
-
-door
-{% for kunstenaar in site.kunstenaars %}
- {% if kunstenaar.title == page.kunstenaar %}
-
-  <a href="{{ kunstenaar.url }}">{{ kunstenaar.title }}</a>
- {% endif %}
-{% endfor %}
-
-{% include expoactive.html expositie=page.expositie onexpopage=false %}
-
-{% if page.tekoop == "ja" and page.prijs > 0 %}
-{{page.prijs}} EUR <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{page.title}}&quot; kopen" target="_top">Koop dit werk</a>
-{% endif %}
+<div class="gallery">
+  <div class="superparagraph">
+    <h3>{{ page.title }}</h3>
+    {{content}}  
+    {%- if page.tekoop == "ja" -%}
+    <p>
+    {%- if page.prijs > 0 -%}
+      {{page.prijs}} EUR
+    {%- endif -%}
+     <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{page.title}}&quot; kopen" target="_top">Navraag naar dit werk</a>
+    </p>
+    {% endif %}
+  </div>
+    <div class="gallery-full">
+      {% include showmedia.html referent=page aslink='no' %}
+    </div>
+</div>
