@@ -1,7 +1,7 @@
 ---
 title:  That Sounds Nice
 kunstenaar: Helen Martino
-expositie:
+expositie: Keramiek 2018
 tekoop: ja
 prijs: 300
 techniek: Steengoed 
