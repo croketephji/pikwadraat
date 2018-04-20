@@ -184,8 +184,8 @@ h2 {
   font-size: calc(1.3 * var(--h1-font-size));
 	color: var(--contrast-color);
   font-family: var(--header-font);
-  margin-bottom: 20px;
-  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-top: 20px;
   padding-right: 10px;
   font-weight: normal;
 }
@@ -195,7 +195,7 @@ h3 {
 	color: var(--grey-color);
 	text-align: left;
   font-family: var(--header-font);
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-top: 0px;
   font-weight: normal;
 }
