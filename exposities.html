@@ -13,6 +13,7 @@ gallerylimit: 6
   <div class=gallery>
     <div class="superparagraph">
       <h3><a href={{gallery-expositie.url}}>{{gallery-expositie.title}}</a></h3>
+      {%- include expoactive.html expositie=gallery-expositie.title onexpopage=true -%}
       {{gallery-expositie.content}}
     </div>
     {% assign werk-samples = site.werken | where:"expositie", gallery-expositie.title | sort:'title' | sample:page.gallerylimit %}

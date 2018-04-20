@@ -1,9 +1,9 @@
 {%- assign media_files = site.static_files | where: "media", true -%}
 {%- assign aslink = include.aslink | default: 'yes' -%}
 {%- for mymedia in media_files -%}
-  {%- if mymedia.path contains include.referent.title and aslink=='yes' -%}
+  {%- if mymedia.path contains include.referent.id and aslink=='yes' -%}
       <a href="{{include.referent.url}}"><img src="{{mymedia.path}}" alt="{{include.referent.title}}" class="cover"></a>
-  {%- elsif mymedia.path contains include.referent.title and aslink=='no' -%}
+  {%- elsif mymedia.path contains include.referent.id and aslink=='no' -%}
       <img src="{{mymedia.path}}" alt="{{include.referent.title}}" class="cover">
   {%- endif -%}
 {%- endfor -%}
