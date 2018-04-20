@@ -7,25 +7,29 @@ layout: default
     <h2>
       <a href="{{ kunstenaar.url }}">{{kunstenaar.title}}</a>
     </h2>
-    {% include expoactive.html expositie=page.expositie onexpopage=false %}
    {% endif %}
   {% endfor %}
 </div>
 <div class="gallery">
   <div class="superparagraph">
-    <h3>{{ page.title }}</h3>
-    {{content}}  
-    {%- if page.tekoop == "ja" -%}
-    <p>
-    {%- if page.prijs > 0 -%}
-      {{page.prijs}} EUR
-    {%- endif -%}
-    Neem contact met ons op om dit werk te kopen.
-    {%- include contactform.html referent=page.title-%}
-    </p>
-    {% endif %}
+    <div class="work-header">
+      <h3>{{ page.title }}</h3>
+      {% include expoactive.html expositie=page.expositie onexpopage=false %}
+    </div>
+    <div class="about-work">
+      {{content}}
+      <p>{{page.techniek}}</p>
+      <p>{{page.afmetingen}}</p>
+      {%- if page.prijs > 0 -%}
+          <p>{{page.prijs}} EUR</p>
+      {%- endif -%}
+      {%- if page.tekoop == "ja" -%}
+        {%- include contactform.html referent=page.title legend="Neem contact met ons op om dit werk te bezichtigen of te kopen."-%}  
+      {% endif %}
+    </div>
   </div>
     <div class="gallery-full">
       {% include showmedia.html referent=page aslink='no' %}
+      
     </div>
 </div>

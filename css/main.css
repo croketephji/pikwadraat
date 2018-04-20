@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 :root {
   --bg-color: #ffffff;
   --contrast-color: #fe9a9a;
@@ -15,40 +19,46 @@
 }
 
 body {
-    margin: 30px var(--large-gap);
-    background-color: var(--bg-color);
-    font-family: var(--body-font);
-    font-weight: normal;
+  margin: 0px var(--large-gap);
+  background-color: var(--bg-color);
+  font-family: var(--body-font);
+  font-weight: normal;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 form {
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  width: 100%;  
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 50vh;
 }
 
+input {
+  color: var(--main-text-color);
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-weight: normal;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 input[type=button], input[type=submit], input[type=reset] {
-    color: var(--main-text-color);
-    padding: 16px 32px;
-    text-decoration: none;
-    font-family: var(--body-font);
-    font-weight: normal;
-    font-size: 1.2em;
-    cursor: pointer;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+input[type=text], input[type=email] {
+  padding: 4px 8px;
 }
 
 textarea {
-  width: calc(100% - 2px); /* Border is added after width for some reason, unlike other elements*/
-  height: 15vh;
-  margin: 0px;
-  padding: 0px;
+  padding: 4px 8px;
+  height: 20vh;
+  width: 100%;
 }
 
 .container {
@@ -78,6 +88,14 @@ textarea {
   grid-gap: var(--tiny-gap);
 }
 
+.work-header {
+  grid-row: 1 / span 1;
+}
+
+.about-work {
+  grid-row: 3 / span 1;
+}
+
 .gallery-thumbnail {
   grid-column: auto / span 6;
   width: 100%;
@@ -98,23 +116,24 @@ textarea {
 
 .gallery-full {
   grid-column: 1 / span 6;
+  grid-row: 2;
   width: 100%;
   height: auto;
 }
 
 .cover {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-
+/*
 .gallery .superparagraph {  
   grid-column: 1 / span 6;
   grid-row: 1 / span 2;
 }
-
+*/
 .logo {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
@@ -126,12 +145,14 @@ textarea {
   grid-column: 2 / span 5;
   grid-row: 1 / span 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
   font-family: var(--header-font-black);
   font-variant-caps: small-caps;
-  font-size: 1.5em;
+  font-size: 1.3em;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .navbar li, footer li {
@@ -148,7 +169,7 @@ textarea {
 h1 {
   font-family: var(--header-font-black);
   font-variant-caps:small-caps;
-  font-size: calc(1.7 * var(--h1-font-size));
+  font-size: calc(1.7 * vsubtar(--h1-font-size));
   color: var(--main-text-color);
 	line-height: 0.85em;
   word-spacing: 1vw;
@@ -170,11 +191,11 @@ h2 {
 }
 
 h3 {
-  font-size: calc(0.6 * var(--h1-font-size));
+  font-size: calc(1em + 0.4 * var(--h1-font-size));
 	color: var(--grey-color);
 	text-align: left;
   font-family: var(--header-font);
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   margin-top: 0px;
   font-weight: normal;
 }
@@ -187,6 +208,8 @@ p {
 	font-family: var(--body-font);
   margin-bottom: 0px;
   margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
 }
 
 a {
@@ -200,8 +223,8 @@ h1 a {
 }
 
 h2 a {
+  display: none; /* only visible on larger screens to avoid confusion*/
   color: var(--contrast-color);
-  text-decoration: none;
 }
 
 p a {
@@ -216,11 +239,11 @@ p a:hover {
   color: var(--contrast-color2);
   display: inline-block;
   font-size: 1em;
-  font-family: var(--header-font);
+  font-family: var(--main-font);
 }
 
 img {
-    image-orientation: from-image;
+  image-orientation: from-image;
 }
 
 @media only screen and (min-width: 400px) {
@@ -231,27 +254,31 @@ img {
   .gallery-thumbnail {
     grid-column: auto / span 3;
   }
+  
+  .navbar {
+    flex-direction: row;
+  }
 }
 
 @media only screen and (min-width: 650px) {
-
+/*
   .superparagraph {
     grid-column: 4 / span 3;
     grid-row: 2 / span 1;
   }
-  
+
   .gallery .superparagraph {
     grid-column: 4 / span 3;
     padding-right: 30px;
   }
-  
+*/
   .navbar {
     grid-column: 2 / span 5;
   }
   
   .header {
     grid-column: 1 / span 4;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
   
   h1 {
@@ -262,9 +289,17 @@ img {
   font-size: calc(0.8 * var(--h1-font-size));
   margin-bottom: 0px;
   }
+  
+  h2 a {
+    display: inherit; /* only visible on larger screens to avoid confusion*/
+  }
 }
 
 @media only screen and (min-width: 800px) {
+  
+  .work-header, .about-work {
+    display: contents; /* ignore these divs for the purposes of grid structure when over 800px screen size */
+  }
   
   .container {
     grid-template-columns: repeat(10, 1fr);
@@ -282,6 +317,7 @@ img {
   }
   
   .gallery-full {
+    grid-row: 1 / span 1;
     grid-column: 5 / span 6;
   }
   
@@ -297,6 +333,10 @@ img {
 }
 
 @media only screen and (min-width: 1300px) {
+  h1 {
+    margin-bottom: 60px;
+  }
+  
   .superparagraph {
     grid-column: 5 / span 6;
   }
