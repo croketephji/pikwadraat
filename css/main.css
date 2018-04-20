@@ -110,6 +110,11 @@ textarea {
   column-gap: 5px;
 }
 
+.full-width {
+  grid-column: 1 / span 10;
+  column-gap: 10px;
+}
+
 .map {
   grid-column: auto / span 5;
   width: 100%;
