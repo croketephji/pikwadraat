@@ -11,9 +11,11 @@ gallerylimit: 6
   	 <p>De gevraagde pagina werd niet gevonden. Sloop er een fout in het webadres?</p>
   </div>
   {% assign werk-samples = site.werken | sample:page.gallerylimit %}
-  {% for werk in werk-samples %}
-      <div class="gallery-thumbnail">
-        {% include showmedia.html referent=werk %}
-      </div>
-  {% endfor %}
+  <div class="gallery-pics">
+    {% for werk in werk-samples %}
+        <div class="gallery-thumbnail">
+          {% include showmedia.html referent=werk %}
+        </div>
+    {% endfor %}
+  </div>
 </div>

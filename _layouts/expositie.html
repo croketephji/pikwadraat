@@ -19,27 +19,16 @@ layout: default
       </div>
 
     {% assign sorted-werken = site.werken | where:'expositie', page.title | sort:'title' %}
-    {%- for gallery-werk in sorted-werken -%}
-      {%- if gallery-werk.kunstenaar == gallery-kunstenaar.title -%}
-        <div class="gallery-thumbnail">
-          {%- include showmedia.html referent=gallery-werk -%}
-        </div>
-        {%- comment %}
-        	This is a foo
+    <div class="gallery-pics">
+      {%- for gallery-werk in sorted-werken -%}
+        {%- if gallery-werk.kunstenaar == gallery-kunstenaar.title -%}
+          <div class="gallery-thumbnail">
+            {%- include showmedia.html referent=gallery-werk -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
 
-        <div class="info">
-          <a href={{gallery-werk.url}}>{{gallery-werk.title}}</a>
-          {%- if gallery-werk.content != blank -%}
-            {{gallery-werk.content}}
-          {%- endif -%}
-          {%- if gallery-werk.tekoop == "ja" and gallery-werk.prijs > 0 -%}
-            {{gallery-werk.prijs}} EUR <a href="mailto:{{ site.email }}?Subject=Het werk &quot;{{gallery-werk.title}}&quot; kopen" target="_top">Koop dit werk</a>
-          {%- endif -%}
-          
-        </div>
-        {% endcomment -%}
-      {%- endif -%}
-    {%- endfor -%}
   </div>
   {%- endif -%}
 {%- endfor -%}

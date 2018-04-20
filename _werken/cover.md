@@ -1,7 +1,7 @@
 ---
 title:  Cover
 kunstenaar: Pavel Knapek
-expositie:
+expositie: Keramiek 2018
 tekoop: ja
 prijs: 975
 techniek: 

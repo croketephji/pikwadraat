@@ -67,6 +67,7 @@ textarea {
   grid-template-rows: auto;
   align-items: flex-start;
   grid-row-gap: 30px;
+  padding-bottom: 50px;
 }
 
 .superparagraph {
@@ -97,21 +98,27 @@ textarea {
 }
 
 .gallery-thumbnail {
-  grid-column: auto / span 6;
+  display: inline-block;
   width: 100%;
-  height: 40vh;
+  margin: 0 0 5px;
+}
+
+.gallery-pics {
+  grid-column: 5 / span 6;
+  width: 100%;
+  column-count: 2;
+  column-gap: 5px;
+}
+
+.full-width {
+  grid-column: 1 / span 10;
+  column-gap: 10px;
 }
 
 .map {
   grid-column: auto / span 5;
   width: 100%;
   height: 100%;
-}
-
-.gallery-midsize {
-  grid-column: auto / span 5;
-  width: 100%;
-  height: auto;
 }
 
 .gallery-full {
@@ -128,12 +135,7 @@ textarea {
   height: 100%;
   overflow: hidden;
 }
-/*
-.gallery .superparagraph {  
-  grid-column: 1 / span 6;
-  grid-row: 1 / span 2;
-}
-*/
+
 .logo {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
@@ -169,7 +171,7 @@ textarea {
 h1 {
   font-family: var(--header-font-black);
   font-variant-caps:small-caps;
-  font-size: calc(1.7 * vsubtar(--h1-font-size));
+  font-size: calc(1.7 * var(--h1-font-size));
   color: var(--main-text-color);
 	line-height: 0.85em;
   word-spacing: 1vw;
@@ -240,10 +242,12 @@ p a:hover {
   display: inline-block;
   font-size: 1em;
   font-family: var(--main-font);
+  margin-bottom: 20px;
 }
 
 img {
   image-orientation: from-image;
+  border: 0;
 }
 
 @media only screen and (min-width: 400px) {
@@ -261,17 +265,7 @@ img {
 }
 
 @media only screen and (min-width: 650px) {
-/*
-  .superparagraph {
-    grid-column: 4 / span 3;
-    grid-row: 2 / span 1;
-  }
 
-  .gallery .superparagraph {
-    grid-column: 4 / span 3;
-    padding-right: 30px;
-  }
-*/
   .navbar {
     grid-column: 2 / span 5;
   }
