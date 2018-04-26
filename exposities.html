@@ -4,14 +4,14 @@ title: Exposities
 permalink: /exposities/index.html
 gallerylimit: 6
 ---
-<div class="superparagraph">
+<div class="textblock">
 <h2>{{ page.title }}</h2>
 </div>
 
 {% assign sorted-exposities = site.exposities | sort:'begin' | reverse %}
 {%- for gallery-expositie in sorted-exposities -%}
   <div class=gallery>
-    <div class="superparagraph">
+    <div class="textblock">
       <h3><a href={{gallery-expositie.url}}>{{gallery-expositie.title}}</a></h3>
       {%- include expoactive.html expositie=gallery-expositie.title onexpopage=true -%}
       {{gallery-expositie.content}}

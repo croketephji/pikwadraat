@@ -35,7 +35,7 @@ h1 {
   font-variant-caps:small-caps;
   font-size: calc(1.7 * var(--h1-font-size));
   color: var(--main-text-color);
-	line-height: 0.85em;
+	line-height: 0.85em;gallery
   word-spacing: 1vw;
   text-decoration: underline;
 	text-decoration-color: var(--contrast-color);
@@ -111,7 +111,7 @@ img {
   border: 0;
 }
 
-.cover {
+.cover { /* tells images to maximize within their box */
   object-fit: contain;
   object-position: center;
   width: 100%;
@@ -151,7 +151,7 @@ textarea {
   width: 100%;
 }
 
-.container {
+.container { /* whole page is a grid */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
@@ -192,7 +192,7 @@ textarea {
   padding-bottom: 0px;
 }
 
-.superparagraph {
+.textblock { /* usually consists of a header and paragraph, sometimes a subtitle */
   grid-column: 1 / span 6;
   grid-row: 3 / span 1;
   display: flex;
@@ -201,7 +201,7 @@ textarea {
   justify-content: center;
 }
 
-.gallery {
+.gallery { /* gallery grid, which consists of a textblock and a gallery-pics */
   grid-column: 1 / span 6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -211,15 +211,15 @@ textarea {
   grid-gap: var(--tiny-gap);
 }
 
-.gallery .superparagraph {
+.gallery .textblock {
   grid-row: 1 / span 1;
 }
 
-.work-header {
+.work-header { /* Header goes on top of image in single-column view. These divs are ignored on higher resolutions */
   grid-row: 1 / span 1;
 }
 
-.about-work {
+.about-work { /* About-work goes below image in single-column view. These divs are ignored on higher resolutions */
   grid-row: 3 / span 1;
 }
 
@@ -237,12 +237,14 @@ textarea {
   margin: 0 0 0px;
 }
 
-.full-width {
+/* doesn't work and probably not very useful
+.full-width { 
   grid-column: 1 / span 10;
   column-gap: 10px;
 }
+*/
 
-.gallery-full {
+.gallery-single { /* replaces gallery-pics when a gallery consists of a single image */
   grid-column: 1 / span 6;
   grid-row: 2;
   width: 100%;
@@ -317,11 +319,11 @@ textarea {
     grid-row-gap: 50px;
   }
   
-  .superparagraph  .subtitle {
+  .textblock  .subtitle {
     margin-bottom: 20px;
   }
   
-  .superparagraph {
+  .textblock {
   grid-column: 7 / span 4;
   grid-row: 2 / span 1;
 }
@@ -331,7 +333,7 @@ textarea {
     grid-template-columns: repeat(10, 1fr);
   }
   
-  .gallery-full {
+  .gallery-single {
     grid-row: 1 / span 1;
     grid-column: 5 / span 6;
   }
@@ -340,7 +342,7 @@ textarea {
     display: contents; /* ignore these divs for the purposes of grid structure when over 800px screen size */
   }
   
-  .gallery .superparagraph {
+  .gallery .textblock {
     grid-column: 1 / span 4;
     grid-row: 1 / span 3;
     padding-right: 30px;
@@ -365,7 +367,7 @@ textarea {
     margin-bottom: 60px;
   }
   
-  .superparagraph {
+  .textblock {
     grid-column: 5 / span 6;
   }
 }

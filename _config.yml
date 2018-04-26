@@ -20,6 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Galerij Pi Kwadraat in Erpe brengt hedendaagse keramiek en glas van jonge, beloftevolle kunstenaars en bekende artiesten.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.pikwadraat.be" # the base hostname & protocol for your site, e.g. http://example.com
+emptyArray: [] # may help with pushing into arrays, see index.html
 collections:
   kunstenaars:
    output: true

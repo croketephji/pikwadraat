@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="superparagraph">
+<div class="textblock">
   {% for kunstenaar in site.kunstenaars %}
    {% if kunstenaar.title == page.kunstenaar %}
     <h2>
@@ -11,24 +11,25 @@ layout: default
   {% endfor %}
 </div>
 <div class="gallery">
-  <div class="superparagraph">
+  <div class="textblock">
     <div class="work-header">
       <h3>{{ page.title }}</h3>
       {% include expoactive.html expositie=page.expositie onexpopage=false %}
     </div>
     <div class="about-work">
       {{content}}
-      <p>{{page.techniek}}</p>
-      <p>{{page.afmetingen}}</p>
+      <p>{{page.techniek}}<br>
+      {{page.afmetingen}}<br>
       {%- if page.prijs > 0 -%}
-          <p>{{page.prijs}} EUR</p>
+          {{page.prijs}} EUR<br>
       {%- endif -%}
+      </p>
       {%- if page.tekoop == "ja" -%}
         {%- include contactform.html referent=page.title legend="Neem contact met ons op om dit werk te bezichtigen of te kopen."-%}  
       {% endif %}
     </div>
   </div>
-    <div class="gallery-full">
+    <div class="gallery-single">
       {% include showmedia.html referent=page aslink='no' %}
       
     </div>

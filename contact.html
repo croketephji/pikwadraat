@@ -6,7 +6,7 @@ permalink: /contact/index.html
 ---
 {% assign expoactive = false %}
 
-<div class="superparagraph">
+<div class="textblock">
 <h2>Contact</h2>
 <p>Welkom in de Dorpsstraat 75 in Erpe. 
 {% for expo in site.exposities %}
@@ -22,7 +22,7 @@ permalink: /contact/index.html
 </div>
 
 <div class="gallery">
-  <div class="superparagraph">
+  <div class="textblock">
     {%- if expoactive == true -%}
       <h3>Openingsuren</h3>
       <p>
@@ -36,7 +36,7 @@ permalink: /contact/index.html
     <h3>Contact</h3>
       {%- include contactform.html referent="Pi Kwadraat Contact" legend="Een afspraak maken? Vragen of opmerkingen? <br>Neem contact op via het formulier of bel Paul op (0032)499 59 39 92." -%}
   </div>
-  <div class="gallery-full">
+  <div class="gallery-single">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.3809440289847!2d3.9762675159031233!3d50.93516766020038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a28609dde2ed%3A0x8ff9261db154c164!2sGalerij+Pi+Kwadraat!5e0!3m2!1sen!2s!4v1522064898654" width="100%" height="400" frameborder="0" draggable="false" style="border:0" allowfullscreen></iframe>
   </div>    
 </div>

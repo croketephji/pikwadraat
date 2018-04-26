@@ -4,7 +4,7 @@ title: Kunstenaars
 permalink: /kunstenaars/index.html
 gallerylimit: 6
 ---
-<div class="superparagraph">
+<div class="textblock">
 <h2>{{ page.title }}</h2>
 </div>
 
@@ -13,7 +13,7 @@ gallerylimit: 6
   {%- include kunstenaarhaswork.html kunstenaar=gallery-kunstenaar.title -%}
   {%- if haswork == true -%}
   <div class="gallery">
-    <div class="superparagraph">
+    <div class="textblock">
       <h3><a href={{gallery-kunstenaar.url}}>{{gallery-kunstenaar.title}}</a></h3>
     </div>
     {%- assign werk-samples = site.werken | sort:'title' | where:'kunstenaar',gallery-kunstenaar.title | sample:page.gallerylimit -%}

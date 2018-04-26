@@ -1,14 +1,17 @@
 ---
 layout: default
 ---
-<div class="superparagraph">
+<div class="textblock">
 <h2>{{ page.title }}</h2>
 {{content}}
 </div>
 
 <div class="gallery">
 {% assign sorted-werken = site.werken | sort:'title' %}
+  <div class="gallery-pics">
+    {%- comment %}
   <div class="gallery-pics full-width">
+    {% endcomment -%}
   {% for werk in sorted-werken %}
     {% if werk.kunstenaar == page.title %}
       <div class="gallery-thumbnail">

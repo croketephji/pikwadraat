@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="superparagraph">
+<div class="textblock">
 <h2>{{ page.title }}</h2>
 {%- include expoactive.html expositie=page.title onexpopage=true -%}
 {{content}}
@@ -14,7 +14,7 @@ layout: default
   {%- if inexpo == true -%}
 
     <div class=gallery>
-      <div class="superparagraph">
+      <div class="textblock">
         <h3><a href={{gallery-kunstenaar.url}} class="gallery-title">{{gallery-kunstenaar.title}}</a></h3>
       </div>
 

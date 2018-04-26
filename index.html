@@ -5,24 +5,31 @@ gallerylimit: 3
 ---
 
 <div class="gallery">
-  <div class="superparagraph">
+  <div class="textblock">
   	 <p>Galerij pi kwadraat heeft de deuren geopend op het eind van de vorige eeuw, september 1999 om precies te zijn. In een eigentijds gebouw worden een aantal <a href="/exposities">tentoonstellingen</a> per jaar georganiseerd. Daarnaast is de galerij open na afspraak.
      De klemtoon ligt op hedendaagse keramiek en glas, maar regelmatig komen ook andere disciplines aan bod. Vaak gaat het om werk van jonge, beloftevolle <a href="/kunstenaars">kunstenaars</a> in combinatie met kunstenaars die al enige bekendheid verworven hebben.</p>
   </div>
 
-{%- assign index-gallery = site.werken | sample:page.gallerylimit -%}
-{%- assign media_files = site.static_files | where: "media", true -%}
-{%- for mymedia in media_files -%}
-  {%- if mymedia.path contains page.title -%}
-    {%- assign index-gallery = index-gallery | push: mymedia -%}
-  {%- endif -%}
+{% assign index-gallery = site.emptyArray %}
+
+{%- assign werken-sample = site.werken | sample:page.gallerylimit -%}
+{%- for werk in werken-sample -%}
+  {%- assign index-gallery = index-gallery | push: werk -%}
 {%- endfor -%}
 
 <div class="gallery-pics">
+  {%- assign media_files = site.static_files | where: "media", true -%}
+  {%- for mymedia in media_files -%}
+    {%- if mymedia.path contains "galerij-pics" -%}
+      <img src="{{mymedia.path}}" alt="{{"De galerij"}}" class="cover">
+    {%- endif -%}
+  {%- endfor -%}
   {% for index-gallery-pic in index-gallery %}
     <div class="gallery-thumbnail">
       {% include showmedia.html referent=index-gallery-pic %}
     </div>
   {% endfor %}
+
 </div>
+
 </div>

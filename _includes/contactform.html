@@ -1,9 +1,9 @@
 <form accept-charset="UTF-8" action="https://formspree.io/{{site.email}}" method="post">
   <p>{{include.legend}}</p>
   <label for="email">Uw emailadres</label>
-  <input type="email" name="email" value="" autocomplete="on" required>
+  <input type="email" id="email" value="" autocomplete="on" required>
   <label for="message">Uw boodschap</label>
-  <textarea name="message" value="" autocomplete="off"></textarea>
+  <textarea id="message" autocomplete="off"></textarea>
   <input type="submit" name="submit" value="Verzenden">
   
   <input type="hidden" name="_subject" value="Betreft {{include.referent}}">
