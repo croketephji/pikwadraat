@@ -8,7 +8,7 @@ gallerylimit: 6
 <h2>{{ page.title }}</h2>
 </div>
 
-{% assign sorted-exposities = site.exposities | sort:'begin' | reverse %}
+{% assign sorted-exposities = site.exposities | sort:'begin'  %}
 {%- for gallery-expositie in sorted-exposities -%}
   <div class=gallery>
     <div class="textblock">
