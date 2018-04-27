@@ -1,5 +1,6 @@
 ---
 title: Pavel Knapek
+ondertitel:
 ---
 
-Keramiek
+Pure geometrische figuren en chaotische vormen die voortkomen uit verfrommeld papier.
