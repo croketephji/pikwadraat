@@ -15,6 +15,7 @@ gallerylimit: 6
   <div class="gallery">
     <div class="textblock">
       <h3><a href={{gallery-kunstenaar.url}}>{{gallery-kunstenaar.title}}</a></h3>
+      <p>{{gallery-kunstenaar.ondertitel}}</p>
     </div>
     {%- assign werk-samples = site.werken | sort:'title' | where:'kunstenaar',gallery-kunstenaar.title | sample:page.gallerylimit -%}
     <div class="gallery-pics">
