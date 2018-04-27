@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="textblock">
+<div class="textblock hide-on-lo-res">
   {% for kunstenaar in site.kunstenaars %}
    {% if kunstenaar.title == page.kunstenaar %}
     <h2>
@@ -11,7 +11,7 @@ layout: default
   {% endfor %}
 </div>
 <div class="gallery">
-  <div class="textblock">
+  <div class="textblock show-contents-on-lo-res">
     <div class="work-header">
       <h3>{{ page.title }}</h3>
       {% include expoactive.html expositie=page.expositie onexpopage=false %}
@@ -25,6 +25,7 @@ layout: default
       {%- endif -%}
       </p>
       {%- if page.tekoop == "ja" -%}
+        <h3>Verkocht?</h3>
         {%- include contactform.html referent=page.title legend="Neem contact met ons op om dit werk te bezichtigen of te kopen."-%}  
       {% endif %}
     </div>
