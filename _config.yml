@@ -28,6 +28,8 @@ collections:
    output: true
   exposities:
    output: true
+  documentatie:
+   output: true
 defaults:
   - scope:
       path: ""
