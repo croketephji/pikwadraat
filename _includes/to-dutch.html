@@ -1,0 +1,7 @@
+{%- if page.url contains '/index_' -%}
+  {% assign dutch-url = page.url | remove:'.html' | split:'_' | first | append:'.html' %}
+  {{dutch-url}}
+{%- else -%}
+  {% assign dutch-url = page.url | remove:'.html' | split:'_' | first | append:'_nl.html' %}
+  {{dutch-url}}
+{%- endif -%}

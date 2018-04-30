@@ -7,7 +7,7 @@ layout: default
 </div>
 
 <div class="gallery">
-{% assign sorted-werken = site.werken | sort:'title' %}
+{% assign sorted-werken = site.werken | where:'lang',page.lang | sort:'title' %}
   <div class="gallery-pics">
     {%- comment %}
   <div class="gallery-pics full-width">

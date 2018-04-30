@@ -1,5 +1,0 @@
----
-title: Mieke Everaet
----
-
-Keramiek

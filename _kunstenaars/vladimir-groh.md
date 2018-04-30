@@ -1,5 +1,0 @@
----
-title: Vladimir Groh
----
-
-Keramiek

@@ -1,5 +1,0 @@
----
-title: Hein Severijns
----
-
-Keramiek
