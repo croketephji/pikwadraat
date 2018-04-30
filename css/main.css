@@ -191,7 +191,7 @@ textarea {
   justify-content: space-between;
   align-content: center;
   flex-wrap: wrap;
-  font-family: var(--header-font-black);
+  font-family: var(--body-font);
   font-variant-caps: small-caps;
   font-size: 22px;
   margin-top: 10px;

@@ -1,0 +1,26 @@
+{% assign locale = site.data.localization[page.lang] %}
+
+<div class="textblock">
+<h2>{{ page.title }}</h2>
+</div>
+
+{%- assign sorted-kunstenaars = site.kunstenaars | sort:'title' | where:'lang',page.lang -%}
+{%- for gallery-kunstenaar in sorted-kunstenaars -%}
+  {%- include kunstenaarhaswork.html kunstenaar=gallery-kunstenaar.title -%}
+  {%- if haswork == true -%}
+  <div class="gallery">
+    <div class="textblock">
+      <h3><a href={{gallery-kunstenaar.url}}>{{gallery-kunstenaar.title}}</a></h3>
+      <p>{{gallery-kunstenaar.ondertitel}}</p>
+    </div>
+    {%- assign werk-samples = site.werken | sort:'title' | where:'kunstenaar',gallery-kunstenaar.title | where:'lang',page.lang | sample:page.gallerylimit -%}
+    <div class="gallery-pics">
+    {%- for werk-sample in werk-samples -%}
+      <div class="gallery-thumbnail">
+        {%- include showmedia.html referent=werk-sample -%}
+      </div>
+    {%- endfor -%}
+    </div>
+  </div>
+  {%- endif -%}
+{%- endfor -%}

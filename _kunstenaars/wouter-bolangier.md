@@ -1,5 +1,0 @@
----
-title: Wouter Bolangier
----
-
-Glas

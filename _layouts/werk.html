@@ -1,9 +1,12 @@
 ---
 layout: default
 ---
+
+{% assign locale = site.data.localization[page.lang] %}
+
 <div class="textblock hide-on-lo-res">
   {% for kunstenaar in site.kunstenaars %}
-   {% if kunstenaar.title == page.kunstenaar %}
+   {% if kunstenaar.title == page.kunstenaar and kunstenaar.lang == page.lang %}
     <h2>
       <a href="{{ kunstenaar.url }}">{{kunstenaar.title}}</a>
     </h2>
@@ -14,7 +17,7 @@ layout: default
   <div class="textblock show-contents-on-lo-res">
     <div class="work-header">
       <h3>{{ page.title }}</h3>
-      {% include expoactive.html expositie=page.expositie onexpopage=false %}
+      {% include expoactive.html expositie=page.expositie onexpopage=false lang=page.lang %}
     </div>
     <div class="about-work">
       {{content}}
@@ -25,8 +28,14 @@ layout: default
       {%- endif -%}
       </p>
       {%- if page.tekoop == "ja" -%}
-        <h3>Verkocht?</h3>
-        {%- include contactform.html referent=page.title legend="Neem contact met ons op om dit werk te bezichtigen of te kopen."-%}  
+        <h3>{{ locale.sales-contact-header }}</h3>
+        {%- comment %}
+          Capture is necessary because a string in curly braces may not be passed to an include
+        {% endcomment -%}
+        {% capture sales-talk %}  
+          {{locale.sales-talk}}
+        {% endcapture %}
+        {%- include contactform.html referent=page.title legend=sales-talk -%}  
       {% endif %}
     </div>
   </div>

@@ -34,7 +34,7 @@ defaults:
   - scope:
       path: ""
     values:
-      language: nl
+      lang: nl
   - scope:
       path: ""
       type: kunstenaars

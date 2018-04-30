@@ -1,7 +1,9 @@
+{% assign locale = site.data.localization[page.lang] %}
+
 <!DOCTYPE html>
-	<html lang="nl">
+	<html lang="{{page.lang}}">
 		<head>
-			<title>{{ page.title }}</title>
+			<title>Pi Kwadraat | {{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display%7CPlayfair+Display+SC:normal,black%7COswald">
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -12,21 +14,28 @@
 		<body>
 		<div class="container">
 			<div class="logo">
-				<a href="/"><img src="/assets/site/logo.svg" alt="Home Icon" class="logosvg"></a>
+				<a href="{{ locale.home }}"><img src="/assets/site/logo.svg" alt="Home Icon" class="logosvg"></a>
 			</div>
 	    <ul class="navbar">
-				<li id="hideable-home-link"><a href="/">pi kwadraat</a></li>
-				{% for expo in site.exposities %}
+				<li id="hideable-home-link"><a href="{{ locale.home }}">{{ locale.nav-home }}</a></li>
+				{% assign right-lang-exhibitions = site.exposities | where:'lang',page.lang %}
+				{% for expo in right-lang-exhibitions %}
 					{%- if expo.begin < site.time and expo.einde > site.time -%}
-						<li><a href={{expo.url}}>bezoek nu {{expo.title}}</a></li>
+						<li><a href={{expo.url}}>{{ locale.expo-invite }} {{expo.title}}</a></li>
 					{%- endif -%}
 				{% endfor %}
-				<li><a href="/exposities">exposities</a></li>
-				<li><a href="/kunstenaars">kunstenaars</a></li>
-				<li><a href="/contact">contact</a></li>
+				<li><a href="{{ locale.exhibitions }}">{{ locale.nav-exhibitions }}</a></li>
+				<li><a href="{{ locale.artists }}">{{ locale.nav-artists }}</a></li>
+				<li><a href="{{ locale.contact }}">{{ locale.nav-contact }}</a></li>
+				{%- if page.lang != 'en' -%}
+					<li><a href="{%- include to-english.html -%}">{{ locale.nav-to-english }}</a></li>					
+				{%- endif -%}
+				{%- if page.lang != 'nl' -%}
+					<li><a href="{%- include to-dutch.html -%}">{{ locale.nav-to-dutch }}</a></li>					
+				{%- endif -%}
 	    </ul>
 			<div class="header">
-			  <h1><a href="/">galerij pi kwadraat</a></h1>
+			  <h1><a href="{{ locale.home }}">{{ locale.site-header }}</a></h1>
 			</div>
 			{{content}}
 		</div>

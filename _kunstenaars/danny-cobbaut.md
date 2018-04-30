@@ -1,5 +1,0 @@
----
-title: Danny Cobbaut
----
-
-Schilderijen

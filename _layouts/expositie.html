@@ -4,11 +4,11 @@ layout: default
 
 <div class="textblock">
 <h2>{{ page.title }}</h2>
-{%- include expoactive.html expositie=page.title onexpopage=true -%}
+{%- include expoactive.html expositie=page.title onexpopage=true lang=page.lang -%}
 {{content}}
 </div>
 
-{% assign sorted-kunstenaars = site.kunstenaars | sort:'title' %}
+{% assign sorted-kunstenaars = site.kunstenaars | where:'lang', page.lang | sort:'title' %}
 {%- for gallery-kunstenaar in sorted-kunstenaars -%}
   {%- include kunstenaarinexpo.html expositie=page.title kunstenaar=gallery-kunstenaar.title%}
   {%- if inexpo == true -%}

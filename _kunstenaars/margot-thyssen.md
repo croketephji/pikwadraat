@@ -1,5 +1,0 @@
----
-title: Margot Thyssen
----
-
-Keramiek
