@@ -11,9 +11,9 @@ Git is een versiebeheersysteem. Het houdt bij welke documenten je aangepast hebt
 
 ### Git-jargon
 Git gebruikt een aantal woorden die vreemd aandoen. De bovenstaande stappen zullen gewoonlijk volstaan, maar hier volgen toch een paar verklaringen voor als je geïnteresseerd bent.
-- repository: bestandsmap die gevolgd wordt door Git
-- commit: een pakket aanpassingen die we bevestigen (to commit) alvorens te uploaden
-- summary: de titel van de commit
-- description: een woordje uitleg over de aanpassingen in de commit
-- master: de versie van onze bestanden die online staat en dus gepubliceerd wordt op pikwadraat.be
-- push: uploaden, online zetten
+- **repository**: bestandsmap die gevolgd wordt door Git
+- **commit**: een pakket aanpassingen die we bevestigen (to commit) alvorens te uploaden
+- **summary**: de titel van de commit
+- **description**: een woordje uitleg over de aanpassingen in de commit
+- **master**: de versie van onze bestanden die online staat en dus gepubliceerd wordt op pikwadraat.be
+- **push**: uploaden, online zetten
