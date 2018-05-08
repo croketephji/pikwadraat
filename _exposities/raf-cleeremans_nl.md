@@ -1,8 +1,8 @@
 ---
-title: Raf Cleermans
+title: Raf Cleeremans
 begin: 2018-05-27 00:00:00 +02:00
 einde: 2018-06-17 00:00:00 +02:00
-lang: en
+lang: nl
 ---
 
-Paintings by Raf Cleermans
+Schilderijen van Raf Cleeremans

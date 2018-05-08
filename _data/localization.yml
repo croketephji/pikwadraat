@@ -23,11 +23,11 @@ nl:
     # /includes/contact.html
     contact-welcome-address: "Welkom in de Dorpsstraat 75 in Erpe."
     contact-expo-active: >
-      Aangezien <a href={{expositie.url}}>{{expositie.title}}</a> nu loopt, zijn we elke weekdag open.
+      Aangezien <a href={{expositie.url}}>{{expositie.title}}</a> nu loopt, zijn we vrijdag, zaterdag en zondag open.
     contact-no-expo: "Maak graag een afspraak om de galerij te bezichtigen."
     opening-hours-title: "Openingsuren"
     opening-hours: >
-      <ul><li>Maandag tot vrijdag 9.00 - 17.00</li><li>Zaterdag 9.00 - 13.00</li><li>Zondag gesloten</li></ul>
+      <ul><li>Vrijdag 14.00 - 18.00</li><li>Zaterdag 14.00 - 18.00</li><li>Zondag 14.00 - 18.00</li></ul>
     contact-form-legend: >
       Een afspraak maken? Vragen of opmerkingen?<br>Neem contact op via het formulier of bel Paul op (0032)499 59 39 92.
     david-footer: >
@@ -67,11 +67,11 @@ en:
     # /includes/contact.html
     contact-welcome-address: "Welcome to our gallery in Dorpsstraat 75, Erpe-Mere, Belgium."
     contact-expo-active: >
-      Since the exhibition <a href={{expositie.url}}>{{expositie.title}}</a> is currently running, we are open every weekday.
+      Since the exhibition <a href={{expositie.url}}>{{expositie.title}}</a> is currently running, we are open Fridays, Saturdays and Sundays.
     contact-no-expo: "We invite you to make an appointment to visit the gallery."
     opening-hours-title: "Opening hours"
     opening-hours: >
-      <ul><li>Monday to Friday 9am - 5pm</li><li>Saturday 9am - 1pm</li><li>Closed on Sunday</li></ul>
+      <ul><li>Friday 2pm - 6pm</li><li>Saturday 2pm - 6pm</li><li>Sunday 2pm - 6pm</li></ul>
     contact-form-legend: >
       Questions? Remarks? You would like to make an appointment? Let us know!<br>Contact us using the form below or call Paul (0032)499 59 39 92.
     david-footer: >

@@ -18,7 +18,7 @@ layout: default
         <h3><a href={{gallery-kunstenaar.url}} class="gallery-title">{{gallery-kunstenaar.title}}</a></h3>
       </div>
 
-    {% assign sorted-werken = site.werken | where:'expositie', page.title | sort:'title' %}
+    {% assign sorted-werken = site.werken | where:'expositie', page.title | where:'lang',page.lang | sort:'title' %}
     <div class="gallery-pics">
       {%- for gallery-werk in sorted-werken -%}
         {%- if gallery-werk.kunstenaar == gallery-kunstenaar.title -%}
