@@ -70,6 +70,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - _werken/template.md
-  - _kunstenaars/template.md
-  - _exposities/template.md
+  - "*template*"
