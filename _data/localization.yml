@@ -16,6 +16,7 @@ nl:
     # /layouts/404.html
     page-not-found: "De gevraagde pagina werd niet gevonden."
     # /includes/index.html
+    news: "Nieuws"
     # ! following localization includes hardcoded links to exhibitions and artists - see above
     introtext: >
       Galerij Pi Kwadraat brengt sinds 1999 hedendaagse keramiek en glas. Onze <a href="/exposities">exposities</a> stellen werk voor van jonge beloften naast <a href="/kunstenaars">kunstenaars</a> die al enige bekendheid verworven hebben. Tussen de expo's in laten we u de galerij graag bezichtigen op afspraak.
@@ -49,7 +50,7 @@ en:
     artists: "/kunstenaars/index_en.html"
     contact: "/contact/index_en.html"
     # /layouts/default.html
-    expo-invite: "now showing"
+    expo-invite: "now showing:"
     nav-home: "pi kwadraat"
     nav-exhibitions: "exhibitions"
     nav-artists: "artists"
@@ -60,6 +61,7 @@ en:
     # /layouts/404.html
     page-not-found: "Page not found."
     # /includes/index.html
+    news: "News"
     # ! following localization includes hardcoded links to exhibitions and artists - see above
     introtext: >
       Pi Kwadraat has been exhibiting contemporary ceramics and glass since 1999. Our <a href="/exposities/index_en.html">exhibitions</a> pair works by up-and-coming young <a href="/kunstenaars/index_en.html">artists</a> with creators who have earned their stripes. We are happy to let you explore the gallery between exhibitions on appointment.
