@@ -20,7 +20,10 @@
 				<li id="hideable-home-link"><a href="{{ locale.home }}">{{ locale.nav-home }}</a></li>
 				{% assign right-lang-exhibitions = site.exposities | where:'lang',page.lang %}
 				{% for expo in right-lang-exhibitions %}
-					{%- if expo.begin < site.time and expo.einde > site.time -%}
+					{% assign nowTimestamp = 'now' | date: '%s' %}
+					{% assign beginsec = expo.begin | date: '%s' %}
+					{% assign eindsec = expo.einde | date: '%s' %}
+					{%- if beginsec < nowTimestamp and eindsec > nowTimestamp -%}
 						<li><a href={{expo.url}}>{{ locale.expo-invite }} {{expo.title}}</a></li>
 					{%- endif -%}
 				{% endfor %}
