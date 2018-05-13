@@ -9,6 +9,22 @@
   {% endcomment -%}
   <div class="textblock">
   	<p>{{ locale.introtext }}</p>
+    {% assign sorted-exposities = site.exposities | sort:'begin' | where:'lang',page.lang %}
+    {%- for expo in sorted-exposities -%}
+      {% assign nowTimestamp = 'now' | date: '%s' %}
+      {% assign beginsec = expo.begin | date: '%s' %}
+      {% assign threeweeksbeforebeginsec = beginsec | minus:1814400 | date: '%s' %}
+      {% assign eindsec = expo.einde | date: '%s' %}
+      {%- if threeweeksbeforebeginsec < nowTimestamp and eindsec > nowTimestamp -%} 
+      {%- comment %}
+      	Checks if Expo starts in < 21 days (1 814 400 seconds) and is not over
+      {% endcomment -%}
+        <h3><a href={{expo.url}}>{{expo.title}}</a></h3>
+        {%- include expoactive.html expositie=expo.title onexpopage=true lang=page.lang -%}
+        {{expo.content}}
+      {%- endif -%}
+          {% assign werk-samples = site.werken | where:"expositie", expo.title | where:'lang',page.lang | sort:'title' | sample:page.gallerylimit %}
+    {%- endfor -%}
   </div>
 
 {% assign index-gallery = site.emptyArray %}
