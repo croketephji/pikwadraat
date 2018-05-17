@@ -40,7 +40,7 @@ h1 {
   font-variant-caps:small-caps;
   font-size: calc(1.7 * var(--h1-font-size));
   color: var(--main-text-color);
-	line-height: 0.85em;
+	line-height: 0.85;
   word-spacing: 1vw;
   text-decoration: underline;
 	text-decoration-color: var(--contrast-color);
