@@ -4,7 +4,7 @@
 <h2>{{ page.title }}</h2>
 </div>
 
-{% assign sorted-exposities = site.exposities | sort:'begin' | where:'lang',page.lang %}
+{% assign sorted-exposities = site.exposities | sort:'begin' | reverse | where:'lang',page.lang %}
 {%- for gallery-expositie in sorted-exposities -%}
   <div class=gallery>
     <div class="textblock">
