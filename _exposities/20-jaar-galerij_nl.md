@@ -1,4 +1,4 @@
---
+---
 title: 20 keramisten vieren 20 jaar galerij π²
 begin: 2019-09-22 11:00:00 +02:00
 einde: 2019-10-16 18:00:00 +02:00
