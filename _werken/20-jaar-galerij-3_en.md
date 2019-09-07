@@ -1,5 +1,5 @@
 ---
-title:  20-jaar-galerij-3
+title: 20-jaar-galerij-3
 kunstenaar: Ann Van Hoey
 expositie: 20 ceramists celebrate the anniversary of '20 years gallery π²'
 tekoop: ja
