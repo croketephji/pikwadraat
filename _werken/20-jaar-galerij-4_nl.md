@@ -1,5 +1,5 @@
 ---
-title:  20-jaar-galerij-4
+title: Marika Vansant
 kunstenaar: Marika Vansant
 expositie: 20 keramisten vieren 20 jaar galerij π²
 tekoop: ja
