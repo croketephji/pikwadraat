@@ -1,5 +1,5 @@
 ---
-title:  20-jaar-galerij-2
+title: Margot Thyssen
 kunstenaar: Margot Thyssen
 expositie: 20 keramisten vieren 20 jaar galerij π²
 tekoop: ja
