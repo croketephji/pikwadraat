@@ -1,15 +1,15 @@
 {% assign locale = site.data.localization[page.lang] %}
 
-<form accept-charset="UTF-8" action="https://formspree.io/{{site.email}}" method="post">
+<form accept-charset="UTF-8" action="https://formspree.io/davidknapen@gmail.com" method="post">
   <p>{{include.legend}}</p>
   <label for="email">{{locale.form-email}}</label>
-  <input type="email" id="email" value="" autocomplete="on" required>
+  <input type="email" name="email" value="" autocomplete="on" required>
   <label for="message">{{locale.form-message}}</label>
-  <textarea id="message" autocomplete="off"></textarea>
+  <textarea name="message" autocomplete="off"></textarea>
   <input type="submit" name="submit" value="{{locale.form-submit}}">
-  
-  <input type="hidden" name="_subject" value="{{local.form-subject-line}} {{include.referent}}">
+
+  <input type="hidden" name="_subject" value="{{locale.form-subject-line}} {{include.referent}}">
   <input type="text" name="_gotcha" style="display:none">
-  <input type="hidden" name="_next" value="{{include.referent.url}}">
-  <input type="hidden" name="_language" value="{{include.lang}}" />
+  <input type="hidden" name="_next" value="{{page.referent.url}}">
+  <input type="hidden" name="_language" value="{{page.lang}}" />
 </form>
