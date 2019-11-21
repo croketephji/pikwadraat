@@ -1,5 +1,5 @@
 ---
-title: Luc-De-Blok
+title: Luc De Blok
 lang: en
 ---
 
