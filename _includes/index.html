@@ -19,7 +19,6 @@
       	Checks if Expo starts in < 21 days (1 814 400 seconds) and is not over
       {% endcomment -%}
         <h3><a href={{expo.url}}>{{expo.title}}</a></h3>
-        {%- include expoactive.html expositie=expo.title onexpopage=true lang=page.lang -%}
         {{expo.content}}
       {%- endif -%}
           {% assign werk-samples = site.werken | where:"expositie", expo.title | where:'lang',page.lang | sort:'title' | sample:page.gallerylimit %}

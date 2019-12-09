@@ -9,11 +9,10 @@
   <div class=gallery>
     <div class="textblock">
       <h3><a href={{gallery-expositie.url}}>{{gallery-expositie.title}}</a></h3>
-      {%- include expoactive.html expositie=gallery-expositie.title onexpopage=true lang=page.lang -%}
       {{gallery-expositie.content}}
     </div>
     {% assign werk-samples = site.werken | where:"expositie", gallery-expositie.title | where:'lang',page.lang | sort:'title' | sample:page.gallerylimit %}
-    <div class="gallery-pics">      
+    <div class="gallery-pics">
       {%- for werk-sample in werk-samples -%}
         {%- if werk-sample.expositie == gallery-expositie.title -%}
           <div class="gallery-thumbnail">

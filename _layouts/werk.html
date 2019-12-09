@@ -17,7 +17,6 @@ layout: default
   <div class="textblock show-contents-on-lo-res">
     <div class="work-header">
       <h3>{{ page.title }}</h3>
-      {% include expoactive.html expositie=page.expositie onexpopage=false lang=page.lang %}
     </div>
     <div class="about-work">
       {{content}}
@@ -32,15 +31,15 @@ layout: default
         {%- comment %}
           Capture is necessary because a string in curly braces may not be passed to an include
         {% endcomment -%}
-        {% capture sales-talk %}  
+        {% capture sales-talk %}
           {{locale.sales-talk}}
         {% endcapture %}
-        {%- include contactform.html referent=page.title legend=sales-talk -%}  
+        {%- include contactform.html referent=page.title legend=sales-talk -%}
       {% endif %}
     </div>
   </div>
     <div class="gallery-single">
       {% include showmedia.html referent=page aslink='no' %}
-      
+
     </div>
 </div>
