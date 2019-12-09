@@ -41,7 +41,6 @@ nl:
     form-message: "Uw boodschap"
     form-submit: "Verzenden"
     form-subject-line: "Betreft"
-    # ! /includes/expoactive.html: localization hardcoded because of extensive code within the strings
 
 en:
     # permalinks
@@ -78,12 +77,11 @@ en:
       Questions? Remarks? You would like to make an appointment? Let us know!<br>Contact us using the form below or call Paul (0032)499 59 39 92.
     david-footer: >
       Designed with love by <a href="mailto:davidknapen@gmail.com?subject=feedback">David Knapen
-    # /layouts/werk.html    
+    # /layouts/werk.html
     sales-contact-header: "Sold?"
     sales-talk: "Get in touch with us to buy this work or arrange a viewing."
-    # /includes/contactform.html    
+    # /includes/contactform.html
     form-email: "Your email address"
     form-message: "Your message"
     form-submit: "Submit"
     form-subject-line: "Regarding"
-    # ! /includes/expoactive.html: localization hardcoded because of extensive code within the strings
