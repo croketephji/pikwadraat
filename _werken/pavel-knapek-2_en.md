@@ -1,11 +1,11 @@
 ---
 title: Porcelain 2
-kunstenaar: Mieke Everaet
+kunstenaar: Pavel Knapek
 expositie: 
 tekoop: ja
-prijs: 1100
+prijs: 1200
 techniek: 
-afmetingen: H 18 cm.- W 28 cm.- D 20 cm.
+afmetingen: H 53 cm.- W 36 cm.
 lang: en
 ---
 

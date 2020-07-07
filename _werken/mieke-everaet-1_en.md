@@ -5,7 +5,7 @@ expositie:
 tekoop: ja
 prijs: 1200
 techniek: 
-afmetingen: H 13.5 cm.- B 24 cm.- D 20 cm.
+afmetingen: H 13.5 cm.- W 24 cm.- D 20 cm.
 lang: en
 ---
 
