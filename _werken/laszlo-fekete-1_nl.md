@@ -4,7 +4,7 @@ kunstenaar: Laszlo Fekete
 expositie:
 tekoop: ja
 prijs: 950
-techniek: Steengoed
+techniek: 
 afmetingen: H 27 cm.- B 22 cm.- D 18 cm.
 lang: nl
 ---
