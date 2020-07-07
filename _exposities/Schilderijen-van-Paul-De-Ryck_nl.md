@@ -6,4 +6,7 @@ lang: nl
 ---
 
 Schilderijen van Paul De Ryck
+
 Keramiek van Mieke Everaet, Vladimir Groh & Yasuyo Nishida, Thomas Scala en Paul Yperman
+
+27/09/2020 - 18/10/2020

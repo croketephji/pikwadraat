@@ -6,4 +6,7 @@ lang: en
 ---
 
 Paintings of Paul De Ryck
+
 Ceramics by Mieke Everaet, Vladimir Groh & Yasuyo Nishida, Thomas Scala and Paul Yperman
+
+27/09/2020 - 18/10/2020
