@@ -2,7 +2,7 @@
 title: Porselain 1
 kunstenaar: Mami Kato
 expositie: 
-tekoop: yes
+tekoop: ja
 prijs: 500
 techniek:
 afmetingen: H 17 cm.- B 22 cm.- D 2 cm.
