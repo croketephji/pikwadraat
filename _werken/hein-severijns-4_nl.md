@@ -1,11 +1,11 @@
 ---
-title: Porselein 1
+title: Porselein 4
 kunstenaar: Hein Severijns
 expositie: 
 tekoop: ja
-prijs: 110
+prijs: 220
 techniek: Matte kristalglazuur
-afmetingen: H 21 cm.- Doorsnede 7 cm.
+afmetingen: H 17 cm.- Doorsnede 13 cm.
 lang: nl
 ---
 

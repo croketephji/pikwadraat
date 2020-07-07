@@ -1,11 +1,11 @@
 ---
-title: Porselain 1
+title: Porselain 4
 kunstenaar: Hein Severijns
 expositie: 
 tekoop: ja
-prijs: 110
+prijs: 220
 techniek: Mat crystal glaze
-afmetingen: H 21 cm.- Diameter 7 cm.
+afmetingen: H 17 cm.- Diameter 13 cm.
 lang: en
 ---
 
