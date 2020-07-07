@@ -1,5 +1,5 @@
 ---
-title: Porselain 3
+title: Porcelain 3
 kunstenaar: Hein Severijns
 expositie: 
 tekoop: ja
@@ -9,4 +9,4 @@ afmetingen: H 28 cm.- Diameter 12 cm.
 lang: en
 ---
 
-Porselain
+Porcelain

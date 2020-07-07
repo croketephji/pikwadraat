@@ -1,5 +1,5 @@
 ---
-title: Porselain 4
+title: Porcelain 4
 kunstenaar: Hein Severijns
 expositie: 
 tekoop: ja
@@ -9,4 +9,4 @@ afmetingen: H 17 cm.- Diameter 13 cm.
 lang: en
 ---
 
-Porselain
+Porcelain

@@ -1,5 +1,5 @@
 ---
-title: Porselain 2
+title: Porcelain 2
 kunstenaar: Mieke Everaet
 expositie: 
 tekoop: ja
@@ -9,4 +9,4 @@ afmetingen: H 18 cm.- B 28 cm.- D 20 cm.
 lang: en
 ---
 
-Porselain
+Porcelain

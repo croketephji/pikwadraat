@@ -1,5 +1,5 @@
 ---
-title: Porselain 1
+title: Porcelain 1
 kunstenaar: Mami Kato
 expositie: 
 tekoop: ja
@@ -9,4 +9,4 @@ afmetingen: H 17 cm.- B 22 cm.- D 2 cm.
 lang: en
 ---
 
-Porselain
+Porcelain

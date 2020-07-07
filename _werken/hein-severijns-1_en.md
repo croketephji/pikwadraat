@@ -1,5 +1,5 @@
 ---
-title: Porselain 1
+title: Porcelain 1
 kunstenaar: Hein Severijns
 expositie: 
 tekoop: ja
@@ -9,4 +9,4 @@ afmetingen: H 21 cm.- Diameter 7 cm.
 lang: en
 ---
 
-Porselain
+Porcelain

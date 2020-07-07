@@ -1,10 +1,12 @@
 ---
-title:  Horst Göbbels 2
+title: Porcelain 2
 kunstenaar: Horst Göbbels
 expositie:
 tekoop: ja
-prijs: 180
+prijs: 110
 techniek: Stoneware
-afmetingen: H 11.5 cm.- W 11.5 cm.- D 8 cm.
+afmetingen: H 10 cm.- W 10,5 cm.- D 8 cm.
 lang: en
 ---
+
+Porcelain
