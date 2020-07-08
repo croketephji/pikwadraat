@@ -1,6 +1,6 @@
 ---
 title: Horst Göbbels
-ondertitel: Perforaties met een gebroken zaagblad
+ondertitel: 
 lang: nl
 ---
 

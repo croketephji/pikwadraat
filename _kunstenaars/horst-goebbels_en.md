@@ -1,6 +1,6 @@
 ---
 title: Horst Göbbels
-ondertitel: Perforations with a broken sawblade
+ondertitel: 
 lang: en
 ---
 
