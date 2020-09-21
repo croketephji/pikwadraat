@@ -7,6 +7,6 @@ lang: en
 
 Paintings of Paul De Ryck
 
-Ceramics by Margot Thyssen, Vladimir Groh & Yasuyo Nishida, Thomas Scala and Paul Yperman
+Ceramics by Margot Thyssen, Vladimir Groh & Yasuyo Nishida, Thomas Scala and Hein Severijns
 
 04/10/2020 - 25/10/2020

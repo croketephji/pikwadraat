@@ -7,6 +7,6 @@ lang: nl
 
 Schilderijen van Paul De Ryck
 
-Keramiek van Margot Thyssen, Vladimir Groh & Yasuyo Nishida, Thomas Scala en Paul Yperman
+Keramiek van Margot Thyssen, Vladimir Groh & Yasuyo Nishida, Thomas Scala en Hein Severijns
 
 04/10/2020 - 25/10/2020
