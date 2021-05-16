@@ -5,4 +5,4 @@ einde: 2021-06-13 18:00:00 +02:00
 lang: en
 ---
 
-Schilderijen van Raph Cleermans en keramiek van Paul Yperman
+Paintings by Raph Cleermans and ceramics by Paul Yperman
