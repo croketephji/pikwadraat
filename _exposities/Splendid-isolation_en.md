@@ -1,0 +1,8 @@
+---
+title: Splendid isolation?
+begin: 2021-05-23 11:00:00 +02:00
+einde: 2021-06-13 18:00:00 +02:00
+lang: en
+---
+
+Schilderijen van Raph Cleermans en keramiek van Paul Yperman
