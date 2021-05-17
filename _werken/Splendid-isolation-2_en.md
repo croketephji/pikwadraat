@@ -1,5 +1,5 @@
 ---
-title: Splendid isolation
+title: Raph Cleermans
 kunstenaar: Raph Cleermans
 expositie: Splendid isolation?
 tekoop: 
