@@ -1,5 +1,5 @@
 ---
-title: Eindejaarstentoonstelling 2021
+title: Tentoonstelling eindejaar 2021
 begin: 2021-11-28 12:00:00 +02:00
 einde: 2021-12-19 16:00:00 +02:00
 lang: nl
