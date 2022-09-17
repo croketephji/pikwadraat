@@ -1,7 +1,7 @@
 ---
 title: 
 kunstenaar: Mieke Everaet
-expositie: Interland
+expositie: Interland Tsjechië - België
 tekoop: ja
 prijs: 
 techniek: 
