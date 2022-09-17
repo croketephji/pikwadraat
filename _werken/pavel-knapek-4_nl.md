@@ -1,7 +1,7 @@
 ---
-title: Interland
+title: 
 kunstenaar: Pavel Knapek
-expositie: 
+expositie: Interland
 tekoop: ja
 prijs: 
 techniek: 
