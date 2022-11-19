@@ -11,3 +11,4 @@ Opening on Sunday the 27nd of November at 11 am.
 The exhibition runs until Sunday the 18th of December included.
 Open every Friday, Saterday and Sunday from 14 pm until 18 pm, and on appointment.
 
+In the attic, you can also discover a fine sellection of ceramics.
