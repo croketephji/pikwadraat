@@ -1,5 +1,5 @@
 ---
-title: Paul De Ryck
+title: Paul De Rijck
 lang: nl
 ---
 
