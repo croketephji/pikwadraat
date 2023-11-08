@@ -36,9 +36,11 @@
 <div class="gallery-pics">
   {%- assign media_files = site.static_files | where: "media", true -%}
   {%- for mymedia in media_files -%}
+    <div>
     {%- if mymedia.path contains "galerij-pics" -%}
       <img src="{{mymedia.path}}" alt="{{ locale.index-pics-alt-text }}" class="cover">
     {%- endif -%}
+    </div>
   {%- endfor -%}
   {% for index-gallery-pic in index-gallery %}
     <div class="gallery-thumbnail">
