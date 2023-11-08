@@ -6,6 +6,6 @@ tekoop: ja
 prijs: 
 techniek: 
 afmetingen: 
-lang: en
+lang: nl
 ---
 
