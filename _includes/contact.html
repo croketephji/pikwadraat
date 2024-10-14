@@ -4,7 +4,7 @@
 
 <div class="textblock">
 <h2>{{page.title}}</h2>
-<p>{{ locale.contact-welcome-address }} 
+<p>{{ locale.contact-welcome-address }}
 {% for expo in site.exposities %}
   {%- if expo.begin < site.time and expo.einde > site.time -%}
     {{ locale.contact-expo-active }}
@@ -14,7 +14,9 @@
 {%- if expoactive == false -%}
   {{ locale.contact-no-expo }}
 {%- endif -%}
-</p> 
+</p>
+<p><a href="mailto:ypermanpaul@gmail.com">{{locale.simple-mail-link}}</a></p>
+
 </div>
 
 <div class="gallery">
@@ -25,19 +27,12 @@
         {{ locale.opening-hours }}
       </p>
     {%- endif -%}
-    {%- comment %}
-      Capture is necessary because a string in curly braces may not be passed to an include
-    {% endcomment -%}
-      {% capture contact-form-legend %}
-       {{ locale.contact-form-legend }}
-      {% endcapture %}
-      {%- include contactform.html referent="Pi Kwadraat Contact" legend=locale.contact-form-legend -%}
+
   </div>
   <div class="gallery-single">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.3809440289847!2d3.9762675159031233!3d50.93516766020038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a28609dde2ed%3A0x8ff9261db154c164!2sGalerij+Pi+Kwadraat!5e0!3m2!1sen!2s!4v1522064898654" width="100%" height="400" frameborder="0" draggable="false" style="border:0" allowfullscreen></iframe>
-  </div>    
+  </div>
 </div>
 <div class="gallery">
   <footer><p>{{ locale.david-footer }}</p></footer>
 </div>
-

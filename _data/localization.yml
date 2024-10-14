@@ -41,6 +41,7 @@ nl:
     form-message: "Uw boodschap"
     form-submit: "Verzenden"
     form-subject-line: "Betreft"
+    simple-mail-link: "Stuur ons een email."
 
 en:
     # permalinks
@@ -85,3 +86,4 @@ en:
     form-message: "Your message"
     form-submit: "Submit"
     form-subject-line: "Regarding"
+    simple-mail-link: "Send us an email."
