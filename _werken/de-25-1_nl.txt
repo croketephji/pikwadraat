@@ -1,0 +1,10 @@
+---
+title: ‘de 25’
+kunstenaar: 
+expositie: ‘de 25’
+tekoop: ja
+prijs: 
+techniek: keramiek
+afmetingen: 
+lang: nl
+---
