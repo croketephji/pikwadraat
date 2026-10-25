@@ -1,8 +1,8 @@
 ---
-title: Gallerij der zuchten
+title: 'Gallerij der zuchten'
 kunstenaar: Paul De Ryck
-expositie: Time takes wings
-tekoop: ja
+expositie: 'Time takes wings'
+tekoop: 
 prijs: 
 techniek: 
 afmetingen: 
