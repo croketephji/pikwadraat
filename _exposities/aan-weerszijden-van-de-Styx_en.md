@@ -11,4 +11,4 @@ Painter Raph Cleermans († 2023) in dialogue with ceramists Annette van den ber
 
 Opening on Sunday the 9th November at 11 am.
 The exhibition runs until Sunday the 30th of November included.
-Open every Friday, Saterday and Sunday from 14 pm until 18 pm, and on appointment.
+Open every Friday, Saturday and Sunday from 14 pm until 18 pm, and on appointment.
